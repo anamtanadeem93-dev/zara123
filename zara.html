@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZARA</title>
+</head>
+<style>
+    nav {
+        display: flex;
+        justify-content: flex-end;  
+        align-items: center;
+        padding: 20px 60px;
+    }
+    .navright {
+        display: flex;
+        align-items: center;
+        gap: 20px; 
+    }
+    .search-box input {
+        width: 180px;
+        padding: 10px 12px;
+        border: none;
+        border-bottom: 1px solid black;
+        background: transparent;
+        outline: none;
+        font-size: 16px;
+    }
+    .search-btn {
+        height:40px;
+        width: 90px;
+        border: 1px solid black;
+        background: black;
+        color: white;
+        padding: 10px 18px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .search-btn:hover {
+        background: white;
+        color: black;
+    }
+    nav a#loginBtn {
+        width: 50px;
+        padding: 10px 20px;
+        border: 1px solid black;
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: 0.3s ease;
+        border-radius: 2px;
+        background: black;
+   }
+    nav a#loginBtn:hover {
+        background: white;
+        color: black;
+   }
+
+    img{
+        width: 200px;
+        height: 400px;
+        margin-top: -190px;
+    }
+     .img2{
+        width: 1325px;
+        height: 700px;
+        
+        margin-top: -100px;
+     }
+     h1{
+        margin-top: -650px;
+        margin-left: 80px;
+        font-size: 50px;
+     }
+     h5{
+        margin-top: -30px;
+        margin-left: 80px;
+        color: grey;
+     }
+     button{
+        width: 90px;
+        height: 50px;
+        border: 1px solid black;
+        background: white;
+        color: black;
+        margin-left: 80px;
+     }
+     button:hover{
+        background: #000;
+        color: white;
+     }
+     .img3{
+        width: 400px;
+        height: 500px;
+        margin-top: 250px;
+        margin-left: 650px;
+     }
+     h2{
+        color: black;
+        margin-left: 85%;
+        margin-top: -300px;
+     }
+     .h52{
+        color: grey;
+        margin-top:-20px;
+        margin-left:85%;
+     }
+     .button2{
+        width: 100px;
+        height: 50px;
+        border: 1px solid black;
+        background: black;
+        color: white;
+        margin-left: 85%;
+        margin-top:-20px;
+     }
+     .button2:hover{
+        color:black;
+        background: white;
+     }
+     .img4{
+        width: 400px;
+        height: 500px;
+        margin-top: -250px;
+        margin-left: 300px;
+     }
+     .h21{
+        color: black;
+        margin-left: 10%;
+        margin-top: -400px;
+     }
+     .h53{
+        color: grey;
+        margin-top:-20px;
+        margin-left:10%;
+     }
+     .button3{
+        width: 100px;
+        height: 50px;
+        border: 1px solid black;
+        background: black;
+        color: white;
+        margin-top:-20px;
+        margin-left: 10%;
+     }
+     .button3:hover{
+        color:black;
+        background: white;
+     }
+    .row{
+        margin-top: 400px;
+    }
+</style>
+<body>
+    <nav>
+    <div class="navright">
+        <div class="search-box">
+            <input type="text" placeholder="Search">
+            <button class="search-btn">Search</button>
+        </div>
+        <a href="zara login.html" id="loginBtn">Login</a>
+    </div>
+</nav>
+    <img src="logo.jpg" alt="">
+    <img src="zarra.jpg" alt="" class="img2">
+    <h1>New arrival</h1>
+    <h5>Discover new collection now</h5>
+    <button class="shop-btn"><b>Shop now</b></button>
+    <div class="row">
+    <img src="zara men.jpg" alt="" class="img3">
+    <h2><b>Man</b></h2>
+    <h5 class="h52">Just for you</h5>
+    <a href="men's collection.html"><button class="shop-btn button2"><b>Shop now</b></button></a>
+    <img src="zara women.jpg" alt="" class="img4">
+    <h2 class="h21"><b>Woman</b></h2>
+    <h5 class="h53">Just for you</h5>
+    <a href="woman collection.html"><button class="shop-btn button3"><b>Shop now</b></button></a>
+    </div>
+</body>
+<script>
+    document.querySelector(".search-btn").addEventListener("click", function() {
+    let value = document.querySelector(".search-box input").value;
+
+    if(value === "") {
+        alert("Please type something to search");
+    } 
+    else if(value === "mens" || value === "men" || value === "Men" || value === "Mens"){
+        window.location.href = "men's collection.html";
+    }
+     else if(value === "womens"){
+        window.location.href = "woman collection.html";
+    }
+    else {
+        window.location.href = "search.html?query=";
+    }
+});
+document.getElementById("loginBtn").onclick = function () {
+    window.location.href = "login.html"; 
+}
+
+</script>
+</html>
