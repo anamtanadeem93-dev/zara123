@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men Collection - ZARA</title>
+
+<style>
+    body {
+    background: white;
+    color: black;
+   }
+    .logo {
+        align-items: center;
+        width: 400px;
+        height: 300px;
+        margin-left: 400px;
+        margin-top: -80px;
+    }
+    h2{
+        margin-top: -120px;
+        margin-left: 700px;
+    }
+    .mhead{
+        width: 1325px;
+        height: 700px;
+    }
+    h1{
+        margin-left: 150px;
+        margin-top: 70px;
+        font-size: 40px;
+    }
+    .row1{
+        display: flex;
+        margin-top: 10px;
+        gap: 20%;
+        margin-left: 300px
+    }
+    .dress1{
+        width: 300px;
+        height: 500px;
+    }
+    .dress9{
+        width: 300px;
+        height: 500px;
+    }
+    button {
+        margin-top: -100px;
+        padding: 10px 20px;
+        background: black;
+        color: white;
+        border: 1px solid black;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    button:hover{
+        background: white;
+        color: black;
+    }
+    .card:hover{
+        transform: scale(1.03);
+    }
+    .row2{
+        display: flex;
+        margin-top: 100px;
+        gap: 5%;
+        margin-left: 70px
+    }
+    .dress3{
+        width: 350px;
+        height: 500px;
+    }
+    .dress4{
+        width: 370px;
+        height: 500px;
+    }
+    .dress5{
+        width: 350px;
+        height: 500px;
+    }
+    .row3{
+        display: flex;
+        margin-top: 100px;
+        gap: 5%;
+        margin-left: 70px
+    }
+    .dress6{
+        width: 350px;
+        height: 500px;
+    }
+    .dress7{
+        width: 370px;
+        height: 500px;
+    }
+    .dress8{
+        width: 350px;
+        height: 500px;
+    }
+    .toggle-box {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 40px;
+}
+
+.toggle {
+    height: 10px;
+    width: 110px;
+    border-radius: 100px;
+    background: white;
+    cursor: pointer;
+    position: relative;
+    transition: 0.4s;
+    border: 1px solid black;
+}
+
+.toggle::before {
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: black;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: 0.4s;
+}
+
+#mode:checked + .toggle {
+    background: white;
+}
+
+#mode:checked + .toggle::before {
+    transform: translate(70px, -50%);
+    background: #000;
+}
+
+</style>
+</head>
+<body>
+    <div class="toggle-box">
+        <input type="checkbox" id="mode" style="display: none;">
+        <label for="mode" class="toggle"></label>
+    </div>
+<img src="logoremove.png" alt="" class="logo">
+<h2><b>Man's</b></h2>
+<div>
+<img src="mhead.jpg" alt="" class="mhead">
+</div>
+<h1><b>Dresses</b></h1>
+<div>
+<div class="row1">
+    <div class="card">
+      <img src="dress1.jpg" alt="" class="dress1">
+      <p>Smart Casual Neutral Outfit <br><b>$170</b></p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+        <img src="dress9.jpg" alt="" class="dress9">
+        <p>Smart Casual Brown Suede Jacket Set <br><b>$205</b></p>
+        <button>Add to Cart</button>
+    </div>
+</div>
+</div>
+<div class="row2">
+    <div  class="card">
+        <img src="dress7.jpg" alt="" class="dress3">
+        <p>Black Oversized Street Wear Jacket <br><b>$47</b></p>
+        <button>Add to Cart</button>
+    </div>
+    <div  class="card">
+        <img src="dress4.jpg" alt="" class="dress4">
+        <p>Casual Navy Layered Fit <br><b>$80</b></p>
+        <button>Add to Cart</button>
+    </div>
+    <div  class="card">
+        <img src="dress5.jpg" alt="" class="dress5">
+        <p> Brown Cardigan With Cozy Vibe Touser <br><b>$50</b></p>
+        <button>Add to Cart</button>
+    </div>
+</div>
+<div class="row3">
+    <div  class="card">
+        <img src="dress6.jpg" alt="" class="dress6">
+        <p>Jet Black Relaxed Ensemble <br> <b>$70</b></p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="card" >
+        <img src="Men's Fashion.jpg" alt="" class="dress7">
+        <p>Oversized Beige Graphic T-Shirt With Brown Baggy <br> Cargo Pants <br><b>$95.00</b></p>
+        <button>Add to Cart</button>
+    </div class="card">
+    <div>
+        <img src="dress8.jpg" alt="" class="dress8">
+        <p>Textured Brown Straight Pants With Urban Black <br> Overshirt <br> <b>$90</b></p>
+        <button>Add to Cart</button>
+    </div>
+</div>
+</body>
+<script>
+    let theme = "light";   
+
+    const checkbox = document.getElementById("mode");
+
+    checkbox.addEventListener("change", function () {
+        
+        if (theme === "light") {
+            document.body.style.background = "grey";
+            document.body.style.color = "white";
+
+            theme = "dark";
+        } 
+        else {
+            document.body.style.background = "white";
+            document.body.style.color = "black";
+
+            theme = "light";
+        }
+
+    });
+    let buttons = document.querySelectorAll("button");
+
+    buttons.forEach(function(btn){
+        btn.addEventListener("click", function(){
+            alert("Your Outfit Added To Cart");
+        });
+    });
+</script>
+
+</html>
